@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/" type="image/x-icon">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css">
+    <title>Chernobylite</title>
+</head>
+
+<body>
+    <!-- ========== Start header ========== -->
+    <header class="header" id="header">
+        <!-- responsive navigation bar with right offcanvas -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm">
+            <div class="container-fluid">
+                <!-- logo -->
+                <a class="navbar-brand" href="#"><i class="fas fas fa-viruses"></i></a>
+                <button class="navbar-toggler text-danger" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- offcanvas -->
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <!-- offcanvas header -->
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close text-bg-danger " data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <!-- offcanvas body -->
+                    <div class="offcanvas-body ">
+                        <!-- ul links -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-header="home" aria-current="page" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-header="gallery" href="#gallery">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-header="community" href="#community">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-header="video" href="#video">Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-header="picture" href="#picture">Pictures</a>
+                            </li>
+                        </ul>
+                        <!-- form -->
+                        <form class="d-flex ">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-danger" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ========== End header ========== -->
+
+    <!-- ========== Start progress indicator ========== -->
+    <div class="progress-indicator">
+        <div class="progress-indicator-bar"></div>
+    </div>
+    <!-- ========== End progress indicator ========== -->
+
+    <!-- ========== Start home section ========== -->
+    <section class="home" id="home">
+        <div class="container">
+            <h1 class="h1"><span>Chernobylite</span>,<br> Stay Focused</h1>
+        </div>
+    </section>
+    <!-- ========== End home section ========== -->
+
+    <!-- ========== Start setting Section ========== -->
+    <div class="setting">
+        <div class="setting-icon">
+            <i class="fab fa-openid"></i>
+        </div>
+        <h3>settings</h3>
+        <h5>Select Your Color</h5>
+        <div class="setting-colors d-flex justify-content-center align-items-center">
+            <ul class="colors d-flex">
+                <li class="active" data-color="#dc3545"></li>
+                <li data-color="#ffc107"></li>
+                <li data-color="#198754"></li>
+                <li data-color="#0dcaf0"></li>
+                <li data-color="#20c997"></li>
+            </ul>
+        </div>
+        <h5>Random Background?</h5>
+        <div class="r-background d-flex justify-content-center align-items-center">
+            <span data-background="yes">Yes</span>
+            <span data-background="no" class="active">No</span>
+        </div>
+        <h5>Show Bullets?</h5>
+        <div class="show-bullets d-flex justify-content-center align-items-center">
+            <span data-show="yes">Yes</span>
+            <span data-show="no" class="active">No</span>
+        </div>
+        <h5>Progress Indicator?</h5>
+        <div class="show-progress-indicator d-flex justify-content-center align-items-center">
+            <span data-indicator="yes">Yes</span>
+            <span data-indicator="no" class="active">No</span>
+        </div>
+        <h5>Reset Settings</h5>
+        <div class="d-flex justify-content-center align-items-center"><button class="reset-button">Reset</button></div>
+    </div>
+    <!-- ========== End setting Section ========== -->
+
+    <!-- ========== Start navigation bullets ========== -->
+    <div class="nav-bullets">
+    </div>
+    <i class="top-icon fab fa-think-peaks"></i>
+    <!-- ========== End navigation bullets ========== -->
+
+    <!-- ========== Start gallery Section ========== -->
+    <section class="gallery scroll-active d-flex align-items-center" id="gallery">
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home01.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home02.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home03.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home04.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home05.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home16.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home07.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 my-1">
+                    <img src="/images/chernobylite_Home08.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-6 my-1">
+                    <img src="/images/chernobylite_Home17.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+                <div class="col-sm-6 col-md-12 col-lg-6 my-1">
+                    <img src="/images/chernobylite_Home06.jpg" class="img-fluid" alt="" title="Chernobylite!">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End gallery Section ========== -->
+
+    <!-- ========== Start skills Section ========== -->
+    <section class="skills d-flex justify-content-center align-items-center" id="skills">
+        <div class="container">
+            <h3 class="text-center py-5">Our Game</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated prog-1" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-progress="70%">Science Fiction</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated prog-2" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-progress="50%">RPG</div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated prog-3" role="progressbar"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" data-progress="90%">Horror</div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End skills Section ========== -->
+
+    <!-- ========== Start timeline Section ========== -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <span>October</span>
+            <div class="row">
+                <div class="left-column col-12 col-sm-6">
+                    <div class="timeline-card left-card">
+                        <div class="card-image"><img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h3">Chernobylite!</h3>
+                        <p class="p">Get ready for a thrilling adventure of survival, conspiracy, horror, love, and
+                            obsession.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right-column col-12 col-sm-6">
+                    <div class="timeline-card right-card">
+                        <div class="card-image"><img src="/images/chernobylite_Home06.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h3">Base Building</h3>
+                        <p class="p">Construct a base from which to plan your daily operations and excursions. Utilise
+                            workstations to craft gadgets, create traps and weapons or modify existing equipment to your
+                            needs.</p>
+                    </div>
+                </div>
+            </div>
+            <span>November</span>
+            <div class="row">
+                <div class="right-column col-12 col-sm-6">
+                    <div class="timeline-card right-card">
+                        <div class="card-image"><img src="/images/chernobylite_Home07.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h3">Survival & Combat</h3>
+                        <p class="p">Survival in the Zone is not easy, and each day brings fresh challenges as comrades
+                            die and supplies diminish. Avoid detection with stealth takedowns or engage in open armed.
+                            Danger lurks in every corner.</p>
+                    </div>
+                </div>
+            </div>
+            <span>December</span>
+            <div class="row">
+                <div class="left-column col-12 col-sm-6">
+                    <div class="timeline-card left-card">
+                        <div class="card-image"><img src="/images/chernobylite_Home08.jpg" alt="" class="img-fluid">
+                        </div>
+                        <h3 class="h3">Team Management</h3>
+                        <p class="p">Companions are key to your survival and the resolution of your journey. Each day
+                            requires the careful planning and assignment of resources and tasks to your comrades.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ========== End timeline Section ========== -->
+
+    <!-- ========== Start slideshow Section ========== -->
+    <section class="slideshow d-flex justify-content-center align-items-center" id="slideshow">
+        <button class="background-button shadow" type="button">Stop BG Images</button>
+        <div class="aa">
+            <h3 class="h3">Slideshow Gallery</h3>
+            <div class="slideshow-card top">
+                <img src="/images/chernobylite_Home01.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home02.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home03.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home04.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home06.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home07.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home08.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home09.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home10.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home01.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home02.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home03.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home04.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home06.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home07.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home08.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home09.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home10.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="slideshow-card down mt-5">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home12.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home13.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home14.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home15.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home16.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home17.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home18.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home19.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home20.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home21.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home22.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home12.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home13.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home14.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home15.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home16.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home17.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home18.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home19.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home20.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home21.jpg" alt="" class="img-fluid">
+                <img src="/images/chernobylite_Home22.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <!-- ========== End slideshow Section ========== -->
+
+    <!-- ========== Start community Section ========== -->
+    <section class="community scroll-active d-flex justify-content-center align-items-center" id="community">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <h2>Server Status</h2>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="community-card">
+                        <span data-goal="89">0</span>
+                        <p>Players Now</p>
+                    </div>
+                    <div class="community-card">
+                        <span data-goal="152">0</span>
+                        <p>Last 24H</p>
+                    </div>
+                    <div class="community-card">
+                        <span data-goal="485">0</span>
+                        <p>All Players</p>
+                    </div>
+                </div>
+                <h2>Stay Tuned</h2>
+                <div class="days-count col-12 d-flex justify-content-center align-items-center">
+                    <div class="days-count-card">
+                        <span>0</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="days-count-card">
+                        <span>0</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="days-count-card">
+                        <span>0</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="days-count-card">
+                        <span>0</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+                <div class="gift col-12 d-flex justify-content-center align-items-center">
+                    <form action="">
+                        <fieldset>
+                            <legend class="float-none w-auto p-2">Request a Gift</legend>
+                            <input type="text" placeholder="Name Your Gift" maxlength="50">
+                        </fieldset>
+                        <span class="gift-length">0 of 50</span>
+                        <span class="gift-progress"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End community Section ========== -->
+
+    <!-- ========== Start category Section ========== -->
+    <section class="category" id="category">
+        <button class="background-button shadow" type="button">Stop BG Images</button>
+        <div class="container">
+            <h2 class="h2">Category SlideShow</h2>
+            <ul class="d-flex justify-content-center align-items-center">
+                <li class="active" data-category=".all">All</li>
+                <li class="li" data-category=".horror">Horror</li>
+                <li class="li" data-category=".science-fiction">Science Fiction</li>
+                <li class="li" data-category=".gameplay">Gameplay</li>
+            </ul>
+            <div class="row g-2 mt-5">
+                <div class="col-sm-6 col-md-4 col-lg-3 all horror">
+                    <img src="/images/chernobylite_Horror01.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all horror">
+                    <img src="/images/chernobylite_Horror02.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all horror">
+                    <img src="/images/chernobylite_Horror03.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction01.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction02.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction03.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction04.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction05.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction06.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all science-fiction">
+                    <img src="/images/chernobylite_ScienceFiction07.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay01.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay02.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay03.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay04.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay05.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 all gameplay">
+                    <img src="/images/chernobylite_Gameplay06.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-12 all gameplay">
+                    <img src="/images/chernobylite_Gameplay07.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End category Section ========== -->
+
+    <!-- ========== Start video Section ========== -->
+    <section class="video scroll-active" id="video">
+        <div class="video-card">
+            <span class="video-preview-progress"></span>
+            <video class="video-preview" width="100%">
+                <source src="videos/Chernobylite_Announcement_Trailer.mp4" type="video/mp4">
+            </video>
+            <div class="container videos d-flex">
+                <div class="mini-video">
+                    <span></span>
+                    <h4>Chernobylite</h4>
+                    <div class="video-progress"></div>
+                    <video width="100%" loop muted data-src="videos/Chernobylite_Announcement_Trailer.mp4">
+                        <source src="videos/Chernobylite_Announcement_Trailer.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mini-video">
+                    <span></span>
+                    <h4>Chernobylite</h4>
+                    <div class="video-progress"></div>
+                    <video width="100%" loop muted data-src="videos/Chernobylite-_-Tili_Tili_Bom-_-Horror_Lullaby_Music_Video.mp4">
+                        <source src="videos/Chernobylite-_-Tili_Tili_Bom-_-Horror_Lullaby_Music_Video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="mini-video">
+                    <span></span>
+                    <h4>Chernobylite</h4>
+                    <div class="video-progress"></div>
+                    <video width="100%" loop muted data-src="videos/Chernobylite_Alternate_Realities.mp4">
+                        <source src="videos/Chernobylite_Alternate_Realities.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End video Section ========== -->
+
+    <!-- ========== Start picture Section ========== -->
+    <section class="picture scroll-active d-flex justify-content-center align-items-center" id="picture">
+        <div class="container mt-5">
+            <div class="picture-preview">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                <span class="counter">1 of 5</span>
+                <span class="left-arrow">
+                    <i class="fa-solid fa-angles-left"></i>
+                </span>
+                <span class="right-arrow">
+                    <i class="fa-solid fa-angles-right"></i>
+                </span>
+            </div>
+            <div class="picture-controls d-flex justify-content-between align-items-center">
+                <span class="previous">Previous</span>
+                <ul class="ul">
+                </ul>
+                <span class="next">Next</span>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End picture Section ========== -->
+
+    <!-- ========== Start photo Section ========== -->
+    <section class="photo d-flex justify-content-center align-items-center" id="photo">
+        <div class="container">
+            <div class="row g-1 justify-content-center">
+                <div class="col-10">
+                    <div class="main-photo">
+                        <img src="/images/chernobylite_Home06.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-2">
+                    <div class="sub-photo active">
+                        <img src="/images/chernobylite_Home06.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sub-photo">
+                        <img src="/images/chernobylite_Home22.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sub-photo">
+                        <img src="/images/chernobylite_Home03.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sub-photo">
+                        <img src="/images/chernobylite_Home15.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="sub-photo last-sub-photo">
+                        <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+                        <span class="photo-counter"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== End photo Section ========== -->
+
+    <!-- ========== Start gallery-images preview ========== -->
+    <div class="gallery-images" id="gallery-images">
+        <div class="container">
+            <span class="gallery-images-left-arrow">
+                <i class="fa-solid fa-square-caret-left"></i>
+            </span>
+            <span class="gallery-images-right-arrow">
+                <i class="fa-solid fa-square-caret-right"></i>
+            </span>
+            <div class="gallery-images-header d-flex justify-content-between align-items-center">
+                <span class="gallery-images-close">close</span>
+                <span class="gallery-images-counter"></span>
+            </div>
+            <div class="gallery-images-preview">
+                <img src="/images/chernobylite_Home05.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="gallery-images-footer">
+                <span class="gallery-images-footer-close shadow">
+                    <i class="fa-solid fa-rectangle-xmark"></i>
+                </span>
+                <div class="row g-0">
+                    <div class="col-md-7 left">
+                        <h3>Chernobylite!</h3>
+                        <ul class="ul">
+                            <li>Gameplay : <span class="gameplay">Hard</span></li>
+                            <li>Type : <span class="type">General</span></li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-md-5 right">
+                        <p class="description">No playthrough is the same. Like your choices, the story is in your hands. Choose wisely whether to trust your comrades or not, Get ready for a thrilling adventure of survival, conspiracy, horror, love, and obsession.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== End gallery-images preview ========== -->
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

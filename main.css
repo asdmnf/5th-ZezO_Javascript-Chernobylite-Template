@@ -1,0 +1,1427 @@
+/***** global *****/
+:root {
+    --main-color: #dc3545;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width:590px){
+    .container{
+        width: 80%;
+    }
+}
+/***** End global *****/
+
+/***** header Section *****/
+.header .navbar-brand {
+    color: var(--main-color);
+}
+
+.header .navbar-nav li a.active,
+.header .navbar-nav li a:hover {
+    color: var(--main-color);
+}
+
+.header form button {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.header form button:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/***** End header Section *****/
+
+/***** progress indicator Section *****/
+.progress-indicator{
+    width: 100%;
+    height: 3px;
+    position: fixed;
+    top: 56px;
+    z-index: 99999999999999;
+    display: none;
+}
+.progress-indicator-bar{
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+}
+/***** End progress indicator Section *****/
+
+/***** home Section *****/
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home05.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    transition: background-image 1s ease;
+}
+
+.home::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.home h1 {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    user-select: none;
+}
+
+.home h1 span {
+    color: red;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+@media (max-width:390px){
+    .home h1 span{
+        font-size: 15px;
+    }
+}
+
+/***** End home Section *****/
+
+/***** setting Section *****/
+.setting {
+    width: 200px;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: -200px;
+    top: 56px;
+    transition: left .3s ease;
+    z-index: 99999999;
+}
+
+/* javascript use it to open */
+.setting-open {
+    left: 0;
+}
+
+.setting .setting-icon {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 20px;
+    position: absolute;
+    right: -84px;
+    top: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.setting-open .setting-icon {
+    color: var(--main-color);
+}
+
+.setting .setting-icon:hover {
+    color: var(--main-color);
+}
+
+.setting h3 {
+    color: var(--main-color);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.setting h5 {
+    text-align: center;
+    letter-spacing: -1px;
+    color: white;
+    margin-top: 50px;
+}
+
+.setting .setting-colors .colors li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    opacity: .5;
+    transition: transform .3s ease;
+}
+
+.setting .setting-colors .colors li:first-child {
+    background-color: #dc3545;
+}
+
+.setting .setting-colors .colors li:nth-child(2) {
+    background-color: #ffc107;
+}
+
+.setting .setting-colors .colors li:nth-child(3) {
+    background-color: #198754;
+}
+
+.setting .setting-colors .colors li:nth-child(4) {
+    background-color: #0dcaf0;
+}
+
+.setting .setting-colors .colors li:nth-child(5) {
+    background-color: #20c997;
+}
+
+.setting .setting-colors .colors li:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.setting .setting-colors .colors li.active {
+    opacity: 1;
+    border-radius: 7px;
+    transform: scale(1.2);
+}
+
+.setting .r-background span {
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.setting .r-background span:hover,
+.setting .r-background span.active {
+    opacity: 1;
+}
+
+.setting .show-bullets span {
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.setting .show-bullets span:hover,
+.setting .show-bullets span.active {
+    opacity: 1;
+}
+
+.setting .show-progress-indicator span{
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .5;
+}
+.setting .show-progress-indicator span:hover,
+.setting .show-progress-indicator span.active {
+    opacity: 1;
+}
+
+.setting .reset-button{
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    margin: 0;
+    position: relative;
+}
+.setting .reset-button::before{
+    content: '';
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 81.75px;
+    height: 43.98px;
+    position: absolute;
+    right: -4px;
+    top: 5px;
+    z-index: -1;
+    transition: .2s ease;
+}
+.setting .reset-button:hover::before{
+    right: -1.5px;
+    top: -2px;
+}
+
+@media (max-height:730px){
+    .setting h5{
+        margin-top: 30px;
+    }
+}
+@media (max-width:320px){
+    .setting .setting-icon{
+        padding: 5px 4px;
+        right: -52px;
+    }
+}
+
+/***** End setting Section *****/
+
+/***** navigation bullets Section *****/
+.nav-bullets{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 8;
+    display: none;
+}
+.nav-bullets .bullet{
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.nav-bullets .active{
+    background-color: var(--main-color);
+}
+.nav-bullets .bullet:hover span{
+    display: block;
+}
+.nav-bullets .bullet span{
+    width: fit-content;
+    background-color: var(--main-color);
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: 2px 20px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+.nav-bullets .bullet span::before{
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--main-color);
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.top-icon{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 9999999999;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--main-color);
+    animation: scroll-top 1.5s linear forwards;
+    display: none;
+}
+@keyframes scroll-top {
+    0%, 10%, 20%, 50%, 80%, 100%{
+        transform: translateY(-50px);
+    }
+    40%, 60%{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:576px){
+    .top-icon{
+        right: 5px;
+    }
+}
+/***** End navigation bullets Section *****/
+
+
+/***** gallery Section *****/
+.gallery {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 30px;
+    position: relative;
+}
+
+.gallery img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    filter: grayscale(60%);
+}
+
+.gallery-overlay {
+    /* created by javascrip */
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.image-card {
+    /* created by javascrip */
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-heading {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.image-preview {
+    /* created by javascrip */
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+}
+.gallery-overlay i{
+    font-size: 30px;
+    color: var(--main-color);
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 20px;
+}
+
+/***** End gallery Section *****/
+
+/***** skills Section *****/
+.skills {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home09.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.skills h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.skills .progress {
+    margin-top: 20px;
+    height: 50px;
+}
+
+.skills .progress .progress-bar {
+    background-color: var(--main-color);
+    width: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    transition: width 1s ease;
+}
+
+/***** End skills Section *****/
+
+/***** timeline Section *****/
+.timeline{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-bottom: 50px;
+    position: relative;
+}
+.timeline::before{
+    content: '';
+    background-color: var(--main-color);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.timeline span{
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+.timeline .left-column{
+    padding-top: 150px;
+    padding-right: 40px;
+}
+.timeline .right-column{
+    padding-top: 150px;
+    padding-left: 40px;
+    margin-left: auto;
+}
+.timeline .timeline-card{
+    background-color: var(--main-color);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+.timeline .timeline-card.left-card::before{
+    content: '';
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--main-color);
+    position: absolute;
+    right: -26px;
+}
+.timeline .timeline-card.left-card::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    right: -47.5px;
+    top: 12px;
+}
+.timeline .timeline-card.right-card::before{
+    content: '';
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent var(--main-color) transparent transparent;
+    position: absolute;
+    left: -26px;
+}
+.timeline .timeline-card.right-card::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    left: -47.5px;
+    top: 12px;
+}
+.timeline .timeline-card .card-image{
+    border: .00001px solid var(--main-color);
+    overflow: hidden;
+    
+}
+.timeline .timeline-card .card-image img{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transition: transform .3s ease;
+}
+.timeline .timeline-card:hover img{
+    transform: scale(1.1);
+}
+.timeline .timeline-card h3{
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+}
+.timeline .timeline-card p{
+    padding: 5px 10px 20px;
+    margin: 0;
+}
+
+@media (max-width:576px){
+    .timeline .timeline-card.left-card::before{
+        display: none;
+    }
+    .timeline .timeline-card.left-card::after{
+        display: none;
+    }
+    .timeline .timeline-card.right-card::before{
+        display: none;
+    }
+    .timeline .timeline-card.right-card::after{
+        display: none;
+    }
+    .timeline .left-column{
+        padding-left: 40px;
+    }
+    .timeline .right-column{
+        padding-right: 40px;
+    }
+}
+@media (max-width:370px){
+    .timeline .timeline-card h3{
+        font-size: 15px;
+    }
+}
+
+/***** End timeline Section *****/
+
+/***** slideshow Section *****/
+.slideshow{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.background-button{
+    background-color: var(--main-color);
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    transition: color .3s ease;
+}
+.background-button:hover{
+    color: white;
+}
+.slideshow h3{
+    text-align: center;
+    color: var(--main-color);
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 100px;
+    mix-blend-mode: color-dodge;
+}
+.slideshow .slideshow-card{
+    display: flex;
+    overflow: hidden;
+}
+.slideshow .slideshow-card.top img{
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: slideshow-right-left 50s linear infinite;
+}
+
+@keyframes slideshow-right-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 10));
+    }
+}
+.slideshow .slideshow-card.top:hover img{
+    animation-play-state: paused;
+}
+
+
+.slideshow .slideshow-card.down img{
+    width: 150px;
+    padding: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: slideshow-left-right 15s linear infinite reverse;
+}
+
+@keyframes slideshow-left-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-150px * 12));
+    }
+}
+.slideshow .slideshow-card.down:hover img{
+    animation-play-state: paused;
+}
+
+@media (max-width:330px){
+    .slideshow h3{
+        font-size: 16px;
+    }
+}
+/***** End slideshow Section *****/
+
+/***** community Section *****/
+.community{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home07.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.community h2{
+    color: white;
+    text-align: center;
+    margin: 30px;
+}
+.community .community-card,
+.community .days-count-card{
+    width: 120px;
+    height: 114px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+.community .community-card:last-child,
+.community .days-count-card:last-child{
+    margin-right: 0;
+}
+.community .community-card span,
+.community .days-count-card span{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.community .community-card p,
+.community .days-count-card p{
+    border-top: 1px solid var(--main-color);
+    color: whitesmoke;
+    padding: 5px;
+    margin: 0;
+}
+
+
+.community .gift form{
+    width: 60%;
+    margin-top: 50px;
+    position: relative;
+}
+.community .gift form fieldset{
+    border: 2px solid var(--main-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+.community .gift form legend{
+    color: #777;
+}
+.community .gift form input{
+    width: 100%;
+    height: 54px;
+    background: none;
+    border: none;
+    padding: 10px;
+    padding-left: 25px;
+    color: white;
+    position: absolute;
+    left: 2px;
+    top: 26px;
+}
+.community .gift form input:focus{
+    border: none;
+    outline: none;
+}
+.community .gift .gift-length{
+    color: #777;
+    padding-top: 5px;
+    padding-right: 5px;
+    float: right;
+}
+.community .gift .gift-length.warning{
+    color: red;
+}
+.community .gift .gift-progress{
+    width: 0;
+    height: 5px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 30px;
+    transition: width .5s ease;
+}
+
+@media (max-width:475px){
+    .community .community-card{
+        height: 75px;
+    }
+    .community .days-count-card{
+        height: 82px;
+    }
+    .community .community-card span,
+    .community .days-count-card span{
+        font-size: 30px;
+    }
+    .community .community-card p{
+        font-size: 12px;
+    }
+    .community .days-count-card p{
+        font-size: 14px;
+    }
+    .community .gift form legend{
+        font-size: 12px;
+    }
+    .community .gift form input{
+        top: 15px;
+    }
+    .community .gift form input::placeholder{
+        font-size: 12px;
+    }
+}
+@media (max-width:405px){
+    .community .community-card{
+        height: 85px;
+    }
+    .community .community-card p{
+        font-size: 10px;
+    }
+    .community .days-count{
+        flex-direction: column;
+    }
+    .community .days-count-card{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+/***** End community Section *****/
+
+/***** category Section *****/
+
+.category{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    background-image: url(/images/chernobylite_Home10.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 1s ease;
+    position: relative;
+}
+
+.category h2{
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.category ul li{
+    background-color: wheat;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.category ul li:last-child{
+    margin-right: 0;
+}
+.category ul li.active,
+.category ul li:hover{
+    color: white;
+    background-color: var(--main-color);
+}
+.category img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:490px){
+    .category h2{
+        font-size: 30px;
+    }
+    .category ul{
+        flex-direction: column;
+    }
+    .category ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .category ul li:last-child{
+        margin-right: 10px;
+    }
+}
+
+
+/***** End category Section *****/
+
+/***** video Section *****/
+
+.video{
+    width: 100%;
+    min-height: 100%;
+    background-image: url(/images/chernobylite_Gameplay05.jpg);
+}
+.video .video-card{
+    position: relative;
+}
+.video .video-card .video-preview-progress{
+    width: 5px;
+    height: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s ease;
+}
+.video .video-card .videos{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .3;
+    transition: opacity .3s ease;
+}
+.video .video-card .videos:hover{
+    opacity: 1;
+}
+.video .video-card .mini-video{
+    width: calc(100% / 3);
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: transform .2s ease;
+}
+.video .video-card .mini-video:hover{
+    transform: scale(1.05);
+    z-index: 9;
+}
+.video .video-card .mini-video video{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.video .video-card .mini-video span{
+    color: white;
+    background-color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.video .video-card .mini-video h4{
+    width: 100%;
+    color: white;
+    background-color: #dc354544;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+.video .video-card .mini-video .video-progress{
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    transition: .3s ease;
+}
+
+@media (max-width:576px){
+    .video{
+        min-height: 150vh;
+    }
+    .video .video-card .videos{
+        flex-direction: column;
+        bottom: -240%;
+    }
+    .video .video-card .mini-video{
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/***** End video Section *****/
+
+/***** picture Section *****/
+
+.picture{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home14.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.picture .picture-preview{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--main-color);
+    border-radius: 80px;
+    overflow: hidden;
+    position: relative;
+}
+.picture .picture-preview .counter{
+    color: var(--main-color);
+    font-size: 20px;
+    user-select: none;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+.picture .picture-preview .left-arrow{
+    height: 100%;
+    color: var(--main-color);
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.picture .picture-preview .left-arrow i{
+    font-size: 25px;
+    transition: transform .2s ease;
+}
+.picture .picture-preview .left-arrow i:hover{
+    transform: scale(1.2);
+}
+.picture .picture-preview .right-arrow{
+    height: 100%;
+    color: var(--main-color);
+    background-color: transparent;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.picture .picture-preview .right-arrow i{
+    font-size: 25px;
+    transition: transform .2s ease;
+}
+.picture .picture-preview .right-arrow i:hover{
+    transform: scale(1.2);
+}
+.picture .picture-preview img{
+    transition: .3s ease;
+}
+.picture .picture-preview img:hover{
+    transform: scale(1.05);
+}
+.picture .picture-controls{
+    width: 75%;
+    margin: 10px auto;
+}
+.picture .picture-controls span{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: color .2s ease;
+}
+.picture .picture-controls span:hover{
+    color: white;
+}
+.picture ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picture ul li{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+.picture ul li.active,
+.picture ul li:hover{
+    background-color: var(--main-color);
+}
+.picture ul li:last-child{
+    margin-right: 0;
+}
+
+@media (max-width:768px){
+    .picture .picture-controls ul{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+@media (max-width:576px){
+    .picture .picture-preview .counter{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .picture .picture-controls{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .picture .picture-controls .previous{
+        order: 2;
+        flex-basis: 30%;
+    }
+    .picture .picture-controls .next{
+        order: 3;
+        flex-basis: 30%;
+    }
+    .picture .picture-controls ul{
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width:390px){
+    .picture .picture-controls{
+        width: 100%;
+    }
+    .picture .picture-controls .previous{
+        padding: 5px;
+    }
+    .picture .picture-controls .next{
+        padding: 5px;
+    }
+}
+@media (max-width:295px){
+    .picture .picture-controls ul{
+        position: relative;
+        left: -11px;
+    }
+}
+@media (max-width:279px){
+    .picture .picture-controls .previous{
+        flex-basis: 100%;
+    }
+    .picture .picture-controls .next{
+        flex-basis: 100%;
+    }
+    .picture .picture-controls ul{
+        display: none;
+    }
+}
+
+/***** End picture Section *****/
+
+/***** photo Section *****/
+
+.photo{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/images/chernobylite_Home12.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.photo .main-photo{
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.photo .main-photo::before{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+}
+.photo .main-photo:hover img{
+    transform: scale(1.05);
+}
+.photo .main-photo img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+.photo .sub-photo{
+    position: relative;
+}
+.photo .sub-photo::before{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    z-index: 9;
+    transition: width .3s ease;
+}
+.photo .sub-photo:hover::before{
+    width: 100%;
+}
+.photo .sub-photo.active{
+    border-bottom: 4px solid var(--main-color);
+}
+.photo .sub-photo img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.photo .last-sub-photo{
+    cursor: pointer;
+    position: relative;
+}
+.photo .last-sub-photo::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #11111166;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.photo .last-sub-photo .photo-counter{
+    color: white;
+    font-size: 22px;
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+@media (max-width:400px){
+    .photo .last-sub-photo .photo-counter{
+        font-size: 12px;
+        top: 14px;
+    }
+}
+/***** End photo Section *****/
+
+/***** gallery-images preview *****/
+.gallery-images{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999999999999999999;
+    display: none;
+}
+.gallery-images .container{
+    position: relative;
+}
+.gallery-images .gallery-images-left-arrow{
+    color: var(--main-color);
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    transition: color .2s ease;
+}
+.gallery-images .gallery-images-left-arrow:hover{
+    color: wheat;
+}
+.gallery-images .gallery-images-left-arrow.hide{
+    /* created by javascript */
+    display: none;
+}
+.gallery-images .gallery-images-right-arrow{
+    color: var(--main-color);
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    transition: color .2s ease;
+}
+.gallery-images .gallery-images-right-arrow:hover{
+    color: wheat;
+}
+.gallery-images .gallery-images-right-arrow.hide{
+    /* created by javascript */
+    display: none;
+}
+.gallery-images .gallery-images-header{
+    padding: 10px;
+}
+.gallery-images .gallery-images-header .gallery-images-close{
+    color: #111;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    transition: color .2s ease;
+}
+.gallery-images .gallery-images-header .gallery-images-close:hover{
+    color: wheat;
+}
+.gallery-images .gallery-images-header .gallery-images-counter{
+    color: wheat;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    user-select: none;
+}
+.gallery-images .gallery-images-preview img{
+    border-top: 3px solid var(--main-color);
+}
+.gallery-images .gallery-images-footer{
+    width: 100%;
+    min-height: 100px;
+    background-color: #22222277;
+    border-top: 2px solid #333;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.gallery-images .gallery-images-footer.hide{
+    /* created by javascript */
+    display: none;
+}
+.gallery-images .gallery-images-footer .gallery-images-footer-close{
+    cursor: pointer;
+    position: absolute;
+    top: -22px;
+    right: 30px;
+}
+.gallery-images .gallery-images-footer .gallery-images-footer-close i{
+    font-size: 30px;
+    color: var(--main-color);
+    transition: color .2s ease;
+}
+.gallery-images .gallery-images-footer .gallery-images-footer-close i:hover{
+    color: wheat;
+}
+.gallery-images .gallery-images-footer .left h3{
+    color: var(--main-color);
+    padding-left: 15px;
+    user-select: none;
+}
+.gallery-images .gallery-images-footer .left ul li{
+    color: wheat;
+    padding-left: 20px;
+    font-size: 18px;
+    user-select: none;
+}
+.gallery-images .gallery-images-footer .left ul li span{
+    font-weight: bold;
+    color: white;
+}
+.gallery-images .gallery-images-footer .right{
+    border-left: 2px solid #333;
+}
+.gallery-images .gallery-images-footer .right p{
+    padding-left: 10px;
+    color: whitesmoke;
+}
+
+@media (max-width:768px){
+    .gallery-images .gallery-images-footer{
+        bottom: -197px;
+    }
+    .gallery-images .gallery-images-footer .left{
+        margin-bottom: 20px;
+    }
+    .gallery-images .gallery-images-left-arrow,
+    .gallery-images .gallery-images-right-arrow{
+        top: 60%;
+    }
+}
+@media (max-width:595px){
+    .gallery-images .gallery-images-footer{
+        bottom: -218px;
+    }
+}
+@media (max-width:440px){
+    .gallery-images .gallery-images-footer{
+        bottom: -355px;
+    }
+}
+/***** End gallery-images preview *****/
