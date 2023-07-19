@@ -870,7 +870,7 @@ miniVideosVideo.forEach(function(video){
 
         // github
         const videoSRC = video.firstElementChild.src.split("/")
-        videoPreview.src = `${videoSRC[3]}/${videoSRC[4]}`;
+        videoPreview.src = `${videoSRC[4]}/${videoSRC[5]}`;
         console.log(videoSRC)
         console.log(videoPreview.src)
         
