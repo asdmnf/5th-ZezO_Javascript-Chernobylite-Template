@@ -863,7 +863,11 @@ let videoProgress = document.querySelector(".video-progress")
 miniVideosVideo.forEach(function(video){
     video.addEventListener("click", function(event){
 
-        videoPreview.src = video.firstElementChild.src.slice(video.firstElementChild.src.indexOf("v"));
+        // videoPreview.src = video.firstElementChild.src.slice(video.firstElementChild.src.indexOf("v"));
+
+        const videoSRC = video.firstElementChild.src.split("/")
+        videoPreview.src = `${videoSRC[3]}/${videoSRC[4]}`;
+
 
         videoElement.load()
 
