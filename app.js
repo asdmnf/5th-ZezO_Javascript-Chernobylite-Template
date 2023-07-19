@@ -865,14 +865,14 @@ miniVideosVideo.forEach(function(video){
 
         // local
         // videoPreview.src = video.firstElementChild.src.slice(video.firstElementChild.src.indexOf("v"));
+
+        
         // const videoSRC = video.firstElementChild.src.split("/")
         // videoPreview.src = `${videoSRC[3]}/${videoSRC[4]}`;
 
         // github
         const videoSRC = video.firstElementChild.src.split("/")
         videoPreview.src = `${videoSRC[4]}/${videoSRC[5]}`;
-        console.log(videoSRC)
-        console.log(videoPreview.src)
         
         
 
