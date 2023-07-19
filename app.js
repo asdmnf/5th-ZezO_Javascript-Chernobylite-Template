@@ -486,7 +486,7 @@ let slIntervalID;
 function slideshowBG(){ 
     slIntervalID = setInterval(() => {
 
-        document.querySelector(".slideshow").style.backgroundImage = `url(/images/${slideshowBackgroundImages[slideshowCounter++]}.jpg)`;
+        document.querySelector(".slideshow").style.backgroundImage = `url(images/${slideshowBackgroundImages[slideshowCounter++]}.jpg)`;
     
         if (slideshowCounter == slideshowBackgroundImages.length){
             slideshowCounter = 0;
@@ -635,7 +635,7 @@ let cbiIntervalID;
 function categoryBG(){
     cbiIntervalID = setInterval(() => {
 
-        document.querySelector(".category").style.backgroundImage = `url(/images/${categoryBackgroundImages[counter++]}.jpg)`;
+        document.querySelector(".category").style.backgroundImage = `url(images/${categoryBackgroundImages[counter++]}.jpg)`;
     
         if (counter == categoryBackgroundImages.length){
             counter = 0;

@@ -77,7 +77,7 @@ a {
 .home {
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home05.jpg);
+    background-image: url(images/chernobylite_Home05.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -379,7 +379,7 @@ a {
 .gallery {
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home10.jpg);
+    background-image: url(images/chernobylite_Home10.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -444,7 +444,7 @@ a {
 .skills {
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home09.jpg);
+    background-image: url(images/chernobylite_Home09.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -476,7 +476,7 @@ a {
 .timeline{
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home04.jpg);
+    background-image: url(images/chernobylite_Home04.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -614,7 +614,7 @@ a {
 .slideshow{
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home03.jpg);
+    background-image: url(images/chernobylite_Home03.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -700,7 +700,7 @@ a {
 .community{
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home07.jpg);
+    background-image: url(images/chernobylite_Home07.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -837,7 +837,7 @@ a {
     width: 100%;
     min-height: 100vh;
     padding-bottom: 50px;
-    background-image: url(/images/chernobylite_Home10.jpg);
+    background-image: url(images/chernobylite_Home10.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -902,7 +902,7 @@ a {
 .video{
     width: 100%;
     min-height: 100%;
-    background-image: url(/images/chernobylite_Gameplay05.jpg);
+    background-image: url(images/chernobylite_Gameplay05.jpg);
 }
 .video .video-card{
     position: relative;
@@ -998,7 +998,7 @@ a {
 .picture{
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home14.jpg);
+    background-image: url(images/chernobylite_Home14.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1180,7 +1180,7 @@ a {
 .photo{
     width: 100%;
     min-height: 100vh;
-    background-image: url(/images/chernobylite_Home12.jpg);
+    background-image: url(images/chernobylite_Home12.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
