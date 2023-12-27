@@ -2,6 +2,8 @@
 
 This project was deployed at [5th-ZezO_Javascript-Chernobylite-Template]( https://asdmnf.github.io/5th-ZezO_Javascript-Chernobylite-Template).
 
+**[Video Preview](https://youtu.be/NkMK8hZHE8Y)**.
+
 ### `Note`
 
 this project is achieved with vanilla javascript only.\
