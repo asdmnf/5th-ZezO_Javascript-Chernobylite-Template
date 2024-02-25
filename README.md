@@ -4,9 +4,14 @@ This project was deployed at [5th-ZezO_Javascript-Chernobylite-Template]( https:
 
 **[Video Preview](https://youtu.be/NkMK8hZHE8Y)**.
 
+### `Tech Stack`
+
+* HTML
+* CSS
+* BOOTSTRAP
+* Vanilla JAVASCRIPT
+
 ### `Note`
 
 this project is achieved with vanilla javascript only.\
-i think it is somewhat very responsive.\
-may be this project is not completed as i wish.\
-but i prefer to keep it like that to remember my begins.
+i think it is somewhat very responsive.
